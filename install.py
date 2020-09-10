@@ -27,7 +27,7 @@ try:
 		number = str(input('Введите номер киви кошелька(без +, начиная с 7): '))
 		qiwi_token = str(input('Введите токен киви: '))
 		pkey = str(input('Введите publicKey, полученный на сайте p2p.qiwi.com: '))
-		admin_id = int(input('Введите id админа: '))
+		admin_id = str(input('Введите id админа: '))
 		admin_chat = str(input('Введите id чата админов: '))
 		cur.execute(f'''INSERT INTO config VALUES('{token}', '{qiwi_token}', '{number}', '{pkey}', '{admin_ids}', '{admin_chat}')''')
 		conn.commit()
@@ -51,12 +51,11 @@ except Exception as e:
   	"admin_chat" TEXT
 )''')
 		conn.commit()
-		admin_ids = []
 		token = str(input('Введите токен бота, получить его можно после создание в боте:@botfather: '))
 		number = str(input('Введите номер киви кошелька(без +, начиная с 7): '))
 		qiwi_token = str(input('Введите токен киви: '))
 		pkey = str(input('Введите publicKey, полученный на сайте p2p.qiwi.com: '))
-		admin_id = int(input('Введите id админа: '))
+		admin_id = str(input('Введите id админа: '))
 		admin_chat = str(input('Введите id чата админов: '))
 		cur.execute(f'''INSERT INTO config VALUES('{token}', '{qiwi_token}', '{number}', '{pkey}', '{admin_ids}', '{admin_chat}')''')
 		conn.commit()
