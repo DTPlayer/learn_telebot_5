@@ -11,7 +11,7 @@ try:
 	result = str(input('У вас уже есть база данных, хотите её пересоздать?[Y/N]: '))
 	if result == 'Y' or result == 'y' or result == 'yes' or result == 'Yes' or result == 'YES':
 		os.rename('data.db', f'backup{str(random.randint(1, 999))}_data.db')
-		print('СОЗДАН БЕКАБ БД!!!')
+		print('СОЗДАН БЕКАП БД!!!')
 		conn = sqlite3.connect('data.db')
 		cur = conn.cursor()
 		cur.execute('''CREATE TABLE config(
