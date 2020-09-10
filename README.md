@@ -1,2 +1,2 @@
-# learn_telebot_5
+# Bot telegram
 Repository for learning Python pytelegrambotapi from DTPlayer
